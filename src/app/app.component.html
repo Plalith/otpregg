@@ -1,0 +1,55 @@
+<!-- <div class="container">
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-12" *ngIf="!div1">
+        <form class="form" (ngSubmit)="checkandinsert(f)" #f="ngForm"> 
+          <label>Enter Your Name</label>
+          <input type="text" name="name" class="form-control" ngModel required>
+          <label>Enter Your Email</label>
+          <input type="email" name="email" class="form-control" ngModel required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+          <label>Enter Your Mobile Number</label>
+          <input type="number" name="mobile" class="form-control" ngModel required pattern="[6789][0-9]{9}"><br> -->
+          <br>
+          <form (ngSubmit)="setlogin(f)" #f="ngForm">
+          <input id="tokentext" type="text" ngModel name="tokentext" required> <br><br>
+          <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login(Set token)</button> &nbsp; <br><br>
+          </form>
+          <button type="button" class="btn btn-primary" (click)="logout();">LogOut(remove token)</button><br><br>
+          <button type="button" class="btn btn-primary" (click)="first();">Call Get method</button><br><br>
+          <button type="button" class="btn btn-primary" (click)="second();">Call Post Method</button>
+          
+          <!-- <div *ngFor="let ele of dummy">
+           <option>{{ele}}</option>
+          </div>
+     -->
+        <!-- </form>
+      </div>
+      <div class="col-sm-12" *ngIf="!div2">
+        <div *ngFor="let users of user">
+        <h1 class="text-center info">Hi Welcome</h1>
+        <h2 class="text-center">name : {{users.name}}</h2>
+        <h3 class="text-center">Email : {{users.email}}<br><br>Phone No : {{users.phone}}<br><br>
+          <button class="btn btn-danger" (click)="logout()">LOGOUT</button>
+        </h3>
+        </div>
+      </div>
+      <div class="col-sm-12" *ngIf="!div3">
+        <form class="form" (ngSubmit)="otpvalidate(f)" #f="ngForm"> 
+          <label>Enter OTP</label>
+          <input type="number" name="otp" class="form-control" ngModel required><br>
+          <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Submit</button><br>{{error}}
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+
+
+
+
+
+
+
+
