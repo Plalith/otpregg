@@ -26,7 +26,7 @@ export class AppComponent implements OnInit {
 
   setlogin(f:NgForm) {
     console.log(f.value.tokentext);
-    this.http.post('http://192.168.1.3:3000/api/login', {token:f.value.tokentext}).subscribe((result:any)=>{
+    this.http.post('/api/login', {token:f.value.tokentext}).subscribe((result:any)=>{
       localStorage.setItem('auth_token', f.value.tokentext);
       console.log(result.message+ ' with token ' +localStorage.getItem('auth_token'))
     },(e)=>{
@@ -34,7 +34,7 @@ export class AppComponent implements OnInit {
     })
   }
   logout() {
-    this.http.get('http://192.168.1.3:3000/api/logout').subscribe((result:any)=> {
+    this.http.get('/api/logout').subscribe((result:any)=> {
       console.log(result.message+ ' and removed  token ' +localStorage.getItem('auth_token'));
       localStorage.removeItem('auth_token');
     },(e)=>{ 
@@ -44,14 +44,14 @@ export class AppComponent implements OnInit {
 
 
   first() {
-    this.http.get("http://192.168.1.3:3000/api/insert").subscribe((resultl)=>{
+    this.http.get("api/insert").subscribe((resultl)=>{
       console.log(resultl);
     } ,(e)=>{
       console.log(e.error);
     })
   }
   second() {
-    this.http.post('http://192.168.1.3:3000/api/second', {'name':'lalith kumar'}).subscribe((result)=>{
+    this.http.post('/api/second', {'name':'lalith kumar'}).subscribe((result)=>{
       console.log(result);
     },(e)=>{
       console.log(e.error);
